@@ -27,7 +27,7 @@ class Solution(object):
         return [str(x)+"->"+str(y) if x!=y else str(x) for x,y in res]
   
 """
-For this problem, we can creat a list to store all the ranges. Basically, we're going to store range with same number (x,x) for the beginning and then update the 2nd
-element (then end range) if the next number is in range. If not, we're going to append new range with same number(x,x). If the element in range is the same number, that mean
+For this problem, we can create a list to store all the ranges. Basically, we're going to store range with same number (x,x) for the beginning and then update the 2nd
+element (the end range) if the element of nums is in range. If not, we're going to append new range with same number(x,x). If the element in range is the same number, that mean
 the range is 0 so we print that number. If the element in range is different, that mean the range is > 0 and we print "x->y". 
 """
