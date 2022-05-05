@@ -18,7 +18,13 @@ class Solution(object):
     def findPoisonedDuration(self, timeSeries, duration):
         total = 0
         for i in range(len(timeSeries)):
-            if timeSeries[i+1] < timeSeries[i] + duration and i < len(timeSeries)-1:
+            if i < len(timeSeries)-1 and timeSeries[i+1] <= timeSeries[i] + duration - 1:
                 total += timeSeries[i+1] - timeSeries[i]
             else :
                 total += duration
+        return total
+
+"""
+This problem is fairly simple. All he had to do is to check if the next time teemo hit exceed the current poison duration or not. If not return add the duration
+to the cumulative duration. If yes, the add the interval between current attack and next attack to the cumulative duration.
+"""
