@@ -45,7 +45,7 @@ class Solution(object):
         return ans
       
 """
-For the brute force solution, we use O(n^2) algorithm to check if the next number for every list is greater than the current number.
+For the brute force solution, we use O(n^2) algorithm to check if the next number for every element in every subset is greater than the current number.
 For the optimal solution, we can get O(n) solution by using stack. Basically, we're keeping tracks of the decresing subset and find the next greater number because
 all those element in decreasing subset will have the same next greater element. We're storing the the element and index of next greater (if any) with dictionary. Then,
 we map the ans by using get() to get the value of every keys in dict (the element which have next greater element) or -1 if not in dict.
