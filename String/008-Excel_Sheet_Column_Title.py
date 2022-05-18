@@ -28,7 +28,7 @@ class Solution:
         return ''.join(result)
       
 """
-For this problem we could check the modulo 26 of the columNumber in every iteration and append it to the result. Then, do floor division of columnNumber to move to the
+For this problem we could check the modulo 26 of the columNumber in every iteration to get the character (from the left). Then, do floor division of columnNumber to move to the
 next character (if any) like ZZZ or AAAA. We can do this because the formula of excel title format is !26^n with n equal to the number of character. So, if there is
 4 character (ZZZZ) then the number is 26 + 26^2 + 26^3  + 26^4 = 475254. We could find the total number of character by iterating a floor division on columnNumber 
 """
