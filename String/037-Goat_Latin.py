@@ -18,10 +18,10 @@ Output: "Imaa peaksmaaa oatGmaaaa atinLmaaaaa"
 
 class Solution(object):
     def toGoatLatin(self, sentence):
-        vowels = ['a', 'e','i','o','u','A','I','U','E','O']
+        vowels = ['a', 'e','i','o','u']
         sen = sentence.split()
         for i,word in enumerate(sen):
-            if word[0] in vowels:
+            if word[0].lower() in vowels:
                 sen[i] = word + 'ma' + ((1+i)*'a')
             else :
                 sen[i] = word[1:] + word[0] + 'ma' + ((1+i)*'a')
