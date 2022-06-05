@@ -2,9 +2,9 @@
 
 ## Hash Map
 Hash map is usually used to store data in a dictionary during an interation and check if a condition is met everytime it gets updated by new data from iteration.
+Example (two sum problem) :
 
 ```
-Example (two sum problem) :
 num_map = {}
 for i, num in enumerate(nums):
   remainder = target - nums[i]
