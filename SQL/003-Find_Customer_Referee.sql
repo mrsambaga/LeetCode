@@ -44,4 +44,4 @@ SELECT name
 FROM Customer
 WHERE referee_id != 2 OR referee_id IS NULL
 
-/*Since boolean operator cannot operate for null value, we have to create 2nd statement with OR to include the name is referee id is null.*/
+/*Since boolean operator cannot operate for null value, we have to create 2nd statement with OR to include the name if the referee id is null.*/
