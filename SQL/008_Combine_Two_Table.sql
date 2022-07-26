@@ -27,8 +27,8 @@ Write an SQL query to report the first name, last name, city, and state of each 
 If the address of a personId is not present in the Address table, report null instead.
 Return the result table in any order.*/
 
-
-
 SELECT P.firstName, P.lastName, A.city, A.state
 FROM Person P
 LEFT JOIN Address A ON P.personId = A.personId
+
+/* We could use left join to insert right table into the left table. If data in left table not exist in right table, this will fill the row with NULL*/
