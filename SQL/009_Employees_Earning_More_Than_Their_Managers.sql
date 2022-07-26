@@ -20,7 +20,6 @@ FROM Employee A
 INNER JOIN (
     SELECT *
     FROM Employee
-    WHERE managerId IS NULL
 ) manager ON A.managerId = manager.id
 WHERE A.salary > manager.salary
 
