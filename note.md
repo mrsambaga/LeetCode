@@ -50,7 +50,7 @@ class Solution(object):
 ```
 
 Kadane algorithm works by keeping all the value of sum of subarray in every element up to that point by adding the previous element to the current element
-and repeat it in an iteration for all element. If we do this in an iteration, we will have the sum of subarray up to that point, ex : [1,2,3] -> [1,3,5].
+and repeat it in an iteration for all element. If we do this in an iteration, we will have the sum of subarray up to that point, ex : [1,2,3] -> [1,3,6].
 But there's is catch, we want to find the maximum value of subarray. So, the Kadane algorithm will perform the addition (previous element + current element) if the previous element is positive (that mean the cumulative is also positive too). This is because the negative value will not help making the maximum subarray.
 If we encounter a negative value, we break and go to the next value (meaning we move to another subarray).
 
