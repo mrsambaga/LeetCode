@@ -15,6 +15,26 @@ Explanation: The ranges are:
 [7,7] --> "7"
 """
 
+#First solution
+class Solution(object):
+    def summaryRanges(self, nums):
+        start, finish = 0,0
+        out = []
+        for x in range(len(nums)):
+            if x>0 and nums[x] != nums[x-1] + 1:
+                finish = x-1
+                if finish == start:
+                    out.append(str(nums[start]))
+                    start = x
+                else :
+                    out.append(str(nums[start]) + "->" + str(nums[finish]))
+                    start = x
+            if x == len(nums)-1 and start == x:
+                out.append(str(nums[start]))
+            elif x == len(nums)-1 and start != x :
+                out.append(str(nums[start]) + "->" + str(nums[len(nums)-1]))
+        return out
+
 #Optimal solution by chichi_x
 class Solution(object):
     def summaryRanges(self, nums):
