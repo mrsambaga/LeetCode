@@ -1,4 +1,4 @@
-## Common Algorithm, Tools, & Tips in Array Problem Set
+## Common Algorithm, Data Structures, Tools, & Tips
 
 ## Hash Map
 Hash map algorithm works by storing the data in a dictionary during an interation and check if a condition is met everytime it gets updated by new data from iteration.
@@ -54,9 +54,30 @@ and repeat it in an iteration for all element. If we do this in an iteration, we
 But there's is catch, we want to find the maximum value of subarray. So, the Kadane algorithm will perform the addition (previous element + current element) if the previous element is positive (that mean the cumulative is also positive too). This is because the negative value will not help making the maximum subarray.
 If we encounter a negative value, we break and go to the next value (meaning we move to another subarray).
 
+## Stacks
 
+Stacks is a linear data structures consist of 2 operation which is push and pop on the top element. It is used to make undo mechanism or checking valid parentheses pair.
+Example (valid parentheses) : 
 
+```
+class Solution(object):
+    def isValid(self, s):
+        stacks = []
+        for x in s:
+            if x == "{":
+                stacks.append('}')
+            elif x == "[":
+                stacks.append(']')
+            elif x == '(':
+                stacks.append(')')
+            elif len(stacks)>0 and x == stacks[-1]:
+                stacks.pop()
+            else :
+                return False
+        return stacks == []
+````
 
+Stacks works by pushing the respective close parentheses to the list everytime we encounter open parentheses. Then, if we encounter close parentheses, check if its the same with the top element. If it is, pop that element. If not, that mean its not valid parentheses. In the end, check if the stacks are empty to make sure there are no open parentheses that are not closed.
 
 
 
