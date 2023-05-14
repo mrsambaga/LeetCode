@@ -17,6 +17,34 @@ class Solution(object):
             temp += str(i)
         digits = int(temp) + 1    
         return list(str(digits))
+    
+# Faster way ( log(n) time complexity)
+
+class Solution(object):
+    def plusOne(self, digits):
+        """
+        :type digits: List[int]
+        :rtype: List[int]
+        """
+        carry = 0
+        digits[len(digits)-1] += 1
+        if digits[len(digits)-1] > 9 :
+            digits[len(digits)-1] = 0
+            carry += 1
+
+        for i in range(len(digits)-2, -1, -1):
+            if digits[i] + carry > 9 :
+                digits[i] = 0
+                carry = 1
+            else :
+                digits[i] = digits[i] + carry
+                carry = 0
+                    
+        if carry > 0:
+            digits[0] = 1
+            digits.append(0)
+        
+        return digits
 
 """
 For this problem we can convert the digits into string and concatenate them through iteration. Then, convert them into integer so it can be incremented by 1.
