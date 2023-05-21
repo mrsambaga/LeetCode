@@ -1,3 +1,3 @@
 # LeetCode
 
-This is a repository for LeetCode practice program
+My LeetCode practice repository includes solutions written in Python, SQL, Golang, and Javascript. The question and solution explanation is in the Python file.
