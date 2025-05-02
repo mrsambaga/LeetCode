@@ -40,3 +40,9 @@ class Solution {
         return result;
     }
 }
+
+// For this problem we can use bucket sort algorithm where we store the count of an element (get from hashmap) inside an array (bucket).
+// Bucket sort algorithm is where we store both the key (num) along with its count with refernce of the index, ex: bucket[count1] = num1, bucket[count2] = num2
+// The array (bucket) will have length equals to the nums length minus 1 since the extreme case is 1 num appear n times or every num appear 1 time. So 1 to n;
+// Then the final loop is to iterate backward (from the highest count/index) the bucket to get all the top k frequent num.
+// This problem has O(n) time complexity because there are 4 O(n) iteration, and O(n) space complexity because there are 3 O(n) array/hashmap.
