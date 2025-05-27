@@ -28,8 +28,7 @@ public class CarFleet {
 
 // In this problem, we need to pair up cars with their position and speed.
 // Then we sort the cars by their position in descending order.
-// This is because we want to start with the car that is farthest from the target.
-// Because cars can't catch up to each other, we have to start with the car that is farthest from the target.
+// This is because we want to start with the car that is farthest from the target because cars can't catch up to each other.
 // We then calculate the time it takes for each car to reach the target.
 // If the time it takes for a car to reach the target is greater than the fleet duration, add a new fleet.
 // Otherwise, the car is part of the current fleet.
